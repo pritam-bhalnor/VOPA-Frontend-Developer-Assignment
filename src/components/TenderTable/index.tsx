@@ -74,10 +74,16 @@ const TenderTable = () => {
 
     useEffect(() => {
         const fetchTenders = async () => {
-            setIsFetching(true);
-            const data = await getContent<Tender[]>('tenders');
-            setRowData(data ?? []);
-            setIsFetching(false);
+            try{
+                setIsFetching(true);
+                const data = await getContent<Tender[]>('tenders');
+                setRowData(data ?? []);
+                setIsFetching(false);
+            } catch (error) {
+                console.error('Error fetching tenders:', error);
+                setRowData([]);
+                setIsFetching(false);
+            }
         };
         fetchTenders();
     }, []);
