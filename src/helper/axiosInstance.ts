@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const BASE_URL = import.meta.env.DEV
+  ? '/api' // proxy works in dev
+  : 'https://tenders.guru/api/es'; // full path needed in production
+
 export const axiosInstance = axios.create({
-    baseURL: '/api',
-    // timeout: 5000,
-    // headers: { 'X-Custom-Header': 'foobar' }
+  baseURL: BASE_URL,
 });
 
 // Add a response interceptor
