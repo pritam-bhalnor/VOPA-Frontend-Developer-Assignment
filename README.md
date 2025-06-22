@@ -1,54 +1,102 @@
-# React + TypeScript + Vite
+# 🇪🇸 Spain Tenders Visualization - VOPA Frontend Developer Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a creative visualization of tender data for companies operating in Spain. It fetches and displays real-time tender information using a visually engaging table and modal interface, built with **React** and **AG Grid**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Fetch and display tender listings with meaningful columns
+- Interactive table powered by AG Grid
+- Click on any row to view detailed tender information
+- Clean, responsive UI with informative layout
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+- **React (JS/TS)**
+- **AG Grid** for data visualization
+- **Tailwind CSS** for styling
+- **Vite** for development and build tooling
+
+---
+
+## 📦 Installation & Running Locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/pritam-bhalnor/VOPA-Frontend-Developer-Assignment.git
+   cd VOPA-Frontend-Developer-Assignment
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   yarn dev
+   ```
+
+---
+
+## 🌐 Production URL
+
+> ⚠️ **CORS Warning**: To avoid CORS issues with the public API during development, please disable browser security using the instructions below.
+
+You can explore the deployed app here:
+
+👉 **[Live Demo](https://vopa-frontend-developer-assignment-pritam.vercel.app/)**
+
+---
+
+## 🛡️ Disable CORS for Production Testing
+
+### 🪟 Windows
+
+```bash
+# Open CMD or PowerShell in the folder where chrome.exe is located:
+.\chrome.exe --user-data-dir="C://chrome-dev-disabled-security" --disable-web-security --disable-site-isolation-trials
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🍎 macOS
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+open /Applications/Google\ Chrome.app --args --user-data-dir="/var/tmp/chrome-dev-disabled-security" --disable-web-security --disable-site-isolation-trials
 ```
+
+### 🐧 Linux
+
+```bash
+google-chrome --user-data-dir="~/chrome-dev-disabled-security" --disable-web-security --disable-site-isolation-trials
+```
+
+🔗 Reference: [Disable CORS in Browser](https://simplelocalize.io/blog/posts/what-is-cors/#3-disable-browser-cors-checks)
+
+---
+
+## 🖼️ Screenshots
+
+### 📊 Tender Table View
+
+*A clean and sortable table of Spain’s latest tenders with key details.*
+
+![Tender dashboard](image-1.png)
+
+### 🔍 Tender Detail Modal
+
+*Detailed view of selected tender displayed in a modal.*
+
+![Tender Details](image-2.png)
+
+---
+
+## 👤 Author
+
+**Pritam Bhalnor**  
+[LinkedIn](https://www.linkedin.com/in/pritam-bhalnor-a00985343/) • [GitHub](https://github.com/pritam-bhalnor)
